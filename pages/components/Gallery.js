@@ -5,25 +5,28 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 
+
 export default function Gallery() {
+  const text1 ="היי שלום כסא ליד חלון";
+ function onHover(){
+   console.log(text1);
+ } 
   return (
-    <div className="bg-white bg-opacity-30">
-  <h1 className="text-4xl position: relative text-center right-0 p-10 top-0 h-100 w-100 overflow-hidden ">הגלריה שלנו</h1><br/><br/>
-  <div className="space-x-1 ">
+    <div className="bg-white bg-opacity-30 m-2  p-2 rounded-lg xl:m-5 xl:p-10">
+  
+  <div className="space-x-1">
    <Carousel className="space-x-40"
   additionalTransfrom={0}
   arrows
   autoPlay
   autoPlaySpeed={40000}
-  centerMode={true}
-  className=""
+  centerMode={false}
   containerClass="container-with-dots"
   dotListClass=""
   draggable={false}
   focusOnSelect={false}
-  infinite
-  itemClass=""
-  keyBoardControl
+  
+
   minimumTouchDrag={80}
   renderButtonGroupOutside={false}
   renderDotsOutside={false}
@@ -34,7 +37,7 @@ export default function Gallery() {
         min: 1024
       },
       items: 3,
-      partialVisibilityGutter: 30
+      partialVisibilityGutter: 60
     },
     mobile: {
       breakpoint: {
@@ -62,28 +65,46 @@ export default function Gallery() {
   
 >
 
-  <div className="p-5"><Image 
-      className="rounded-lg"
-      src='/../public/images/demo.jpeg'
+  <div className="pr-5 pl-5 " placeholder="hello" onMouseEnter={onHover}><Image 
+      className="rounded-lg hover:h-40"
+      src='/../public/images/image1.jpg'
         width={500}
         height={500}
-      ></Image></div>
-  <div className="p-5"> <Image 
-      className="rounded-lg"
-      src='/../public/images/demo2.jpeg'
+      >
+
+      </Image>
+      </div>
+  <div className="pr-5 pl-5">
+     <Image 
+      className="rounded-lg "
+      src='/../public/images/image2.jpg'
         width={500}
         height={500}
         
-      ></Image></div>
-  <div className="p-5"><Image 
+      ></Image>
+      </div>
+  <div className="pr-5 pl-5"><Image 
       className="rounded-lg "
-      src='/../public/images/demo.jpeg'
+      src='/../public/images/image3.jpg'
+        width={500}
+        height={500}
+      >
+        </Image></div>
+  <div className="pr-5 pl-5"><Image 
+      className="rounded-lg "
+      src='/../public/images/image1.jpg'
         width={500}
         height={500}
       ></Image></div>
-  <div className="p-5"><Image 
+      <div className="pr-5 pl-5"><Image 
       className="rounded-lg "
-      src='/../public/images/garden-background.jpeg'
+      src='/../public/images/image5.jpg'
+        width={500}
+        height={500}
+      ></Image></div>
+      <div className="pr-5 pl-5"><Image 
+      className="rounded-lg "
+      src='/../public/images/image6.jpg'
         width={500}
         height={500}
       ></Image></div>
